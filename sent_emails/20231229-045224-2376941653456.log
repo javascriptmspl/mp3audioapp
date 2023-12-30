@@ -1,0 +1,23 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: kamleshlovesu@gmail.com
+Date: Fri, 29 Dec 2023 12:52:24 -0000
+Message-ID: <170385434433.11636.329066789427944768@DESKTOP-TR6SU3G>
+
+
+
+  To initiate the password reset process for your kamleshlovesu@gmail.com Django Registration/Login App Account,
+  click the link below:
+
+  http://127.0.0.1:8000/reset/NQ/bzydjc-b1b7b60b3acaccbf7e5aa913c260fd05/
+
+  If clicking the link above doesn't work, please copy and paste the URL in a new browser
+  window instead.
+
+  Sincerely,
+  The Developer
+
+-------------------------------------------------------------------------------

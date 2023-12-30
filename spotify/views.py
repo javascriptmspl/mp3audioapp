@@ -21,6 +21,7 @@ def home(request):
 
 
 class SongCreateView(LoginRequiredMixin, CreateView):
+    login_url = 'login/'
     model = SpotMusic
     template_name = 'spotify/song-create.html'
     fields = ['song_author','song_title','song_image','audio']
@@ -73,3 +74,16 @@ def login(request):
 def logout(request):
     logout_user(request)
     return redirect('login')
+
+
+from django.views import View
+from django.shortcuts import render
+from .mixins import TimingMixin
+
+class MyTimedView(TimingMixin, View):
+    def get(self, request,*args, **kwargs):
+        elapsed_time = 90
+        y = super().log_timing(request, elapsed_time)
+        # y='ll'
+        
+        return render(request, 'my_template.html',{'y':y})
