@@ -1,11 +1,26 @@
 {% extends 'spotify/base.html'%}
 {% block content %}
-    <div>
+    <!-- <div >
         <h5>Upload a new song</h5>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Upload</button>
         </form>
-    </div>
+    </div> -->
+
+
+
+    <section id="pricing" class="bg-gradient-very-light-gray" style="font-weight: 800; color: #333; margin-bottom: 30px;">
+            <h5>Upload a new song</h5>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-lg btn-dark-gray btn-hover-animation-switch btn-box-shadow btn-round-edge section-link">Upload</button>
+            </form> 
+        <div class="container login_page_parent_wrap">          
+        </div>
+      </section> 
+
+
 {% endblock content %}

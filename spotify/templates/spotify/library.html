@@ -1,0 +1,37 @@
+{% extends 'spotify/base.html'%}
+{% load static %}
+{% block content %}
+
+<section id="pricing" class="bg-gradient-very-light-gray">
+    <div class="container">
+        <!-- <div class="row justify-content-center mb-4">
+            <div class="col-xl-7 col-lg-9 text-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <h2 class="h1 fw-800 text-dark-gray ls-minus-3px">Play and enjoy the music</h2>
+            </div>
+        </div> -->
+        <div style="row-gap: 50px;" class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 position-relative justify-content-center" data-anime='{ "el": "childs", "rotateZ": [5, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
+            <!-- start images box -->
+            <!-- end images box -->
+            <!-- start images box -->
+             {% for item in all %}
+            <div class="col text-center md-mb-50px shadow"> 
+                    <img style="width: 200px; height:150px;" src="{{ item.song_image.url }}" alt="" />
+                <div class="mt-30px">
+                    <h6 class="fw-700 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4">Title: {{ item.song_title}}</h6>
+                            <h6 class="fw-600 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4">Artist: {{ item.song_author }}</h6>
+                            <a href="{% url 'play' item.id %}" class="btn btn-lg btn-dark-gray btn-hover-animation-switch btn-box-shadow btn-round-edge section-link mb-2">Play</a>
+                    <!-- <span class="fs-18 fw-700 text-dark-gray mt-10px d-block">Grey</span> -->
+                </div>
+            </div>
+            {% endfor %}
+            <!-- end images box -->
+            
+            
+        </div>
+    
+    </div>
+</section> 
+
+
+
+{% endblock content%}

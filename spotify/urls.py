@@ -18,6 +18,13 @@ urlpatterns = [
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    
+    path('library/', views.library, name="library"),
+    
+    # for test
+    # path('index/', views.index, name='index'),
+    # path('base2/', views.base2, name='base2'),
+    # path('play2/<int:id>',views.playSong2, name="play2")
 ]
 
 

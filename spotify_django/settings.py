@@ -121,9 +121,22 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR , "static"),) 
-STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR , 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+# """
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,'/static'),
+#     'G:/mp3audioapp-main',
+# ]"""
+
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend" # new
 EMAIL_FILE_PATH = os.path.join(BASE_DIR , "sent_emails")
+
+
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

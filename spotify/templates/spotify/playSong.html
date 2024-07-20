@@ -1,19 +1,28 @@
 {% extends 'spotify/base.html'%}
 {% block content %}
 
-    <div>
-        <div class="card bg-dark text-white">
-            <img src="{{ song.song_image.url }}" class="card-img" alt="..." width="350" height="600">
-            <div class="card-img-top">
-              <h5 class="card-title" style="margin-left: 3%;">{{ song.song_title }}</h5>
-              <h7 class="card-title">{{ song.song_author }}</h7>
-              <audio controls>
-                <source src="{{ song.audio.url }}" type="audio/mpeg">
-                <source src="myAudio.ogg" type="audio/ogg">
-                <p>Your browser doesn't support HTML5 audio. Here is
-                   a <a href="myAudio.mp3">link to the audio</a> instead.</p>
-              </audio>
-            </div>
+   
+
+
+    <section id="pricing" class="bg-gradient-very-light-gray">
+  
+      <div class="container-sm">
+        <div class="card bg-light text-center text-dark">
+          <img src="{{ song.song_image.url }}" class="card-img" alt="..." width="150" height="200">
+          <div class="card-img-top my-3">
+            <!-- <h5 class="card-title fw-800 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4">Title: {{ song.song_title }}</h5>
+            <h6 class="card-title fw-800 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4">Author: {{ song.song_author }}</h6> -->
+            <audio controls class="w-100 rounded-0">
+              <source src="{{ song.audio.url }}" type="audio/mpeg">
+              <source src="myAudio.ogg" type="audio/ogg">
+              <p>Your browser doesn't support HTML5 audio. Here is
+                 a <a href="myAudio.mp3">link to the audio</a> instead.</p>
+            </audio>
           </div>
-    </div>
+        </div>
+      </div>
+    </section> 
+
+
+
 {% endblock content%}
