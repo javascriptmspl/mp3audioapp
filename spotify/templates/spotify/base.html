@@ -99,21 +99,21 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- start footer column -->
-                <div class="col-lg-7 md-mb-10px text-center text-lg-start">  
+                <div class="col-lg-12 md-mb-10px text-center text-lg-center">  
                     <ul class="footer-navbar lh-normal">
-                        <li class="nav-item"><a href="#overview" class="inner-link nav-link">Overview</a></li>
-                        <li class="nav-item"><a href="#features" class="inner-link nav-link">Features</a></li>
-                        <li class="nav-item"><a href="#technology" class="inner-link nav-link">Technology</a></li>
-                        <li class="nav-item"><a href="#design" class="inner-link nav-link">Design</a></li>
-                        <li class="nav-item"><a href="#review" class="inner-link nav-link">Review</a></li> 
-                        <li class="nav-item"><a href="#pricing" class="inner-link nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="{% url 'home' %}#overview" class="inner-link nav-link">About</a></li>
+                        <li class="nav-item"><a href="{% url 'home' %}#features" class="inner-link nav-link">Features</a></li>
+                        <li class="nav-item"><a href="{% url 'home' %}#technology" class="inner-link nav-link">Genres</a></li>
+                        <li class="nav-item"><a href="{% url 'home' %}#design" class="inner-link nav-link">Artists</a></li>
+                        <li class="nav-item"><a href="{% url 'library' %}" class="inner-link nav-link">Library</a></li> 
+                        <!-- <li class="nav-item"><a href="#pricing" class="inner-link nav-link">Pricing</a></li> -->
                     </ul>
                 </div>
                 <!-- end footer column -->
                 <!-- start footer column -->
-                <div class="col-lg-5 last-paragraph-no-margin text-center text-lg-end">
+                <!-- <div class="col-lg-5 last-paragraph-no-margin text-center text-lg-end">
                     <p>&copy; 2024 Crafto is proudly powered by <a href="https://www.themezaa.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-600">ThemeZaa</a></p>
-                </div>
+                </div> -->
                 <!-- end footer column -->
             </div>
         </div> 

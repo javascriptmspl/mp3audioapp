@@ -790,7 +790,7 @@
                                 <!-- start testimonial item -->
                                 <div class="swiper-slide bg-white border-radius-4px">
                                     <div class="position-relative ps-13 pe-13 md-ps-10 md-pe-10 sm-ps-7 sm-pe-7 pt-20 pb-10 lg-pt-22 md-pt-30 sm-pt-20">
-                                        <img alt="" src="https://via.placeholder.com/148x148" class="absolute-middle-center top-0px rounded-circle w-150px xs-w-100px border border-color-white box-shadow-extra-large border-8">
+                                        <img alt="" src="{% static 'old/images/avtar-24.jpg' %}" class="absolute-middle-center top-0px rounded-circle w-150px xs-w-100px border border-color-white box-shadow-extra-large border-8">
                                         <div class="testimonials-content">
                                             <span class="text-dark-gray fs-18 lh-30 fw-600 mb-5px d-block">Every element is designed beautifully and perfect!</span>
                                             <p class="mb-25px">Influential artist blending rap and R&B, known for his versatile style, chart-topping hits, and significant impact on modern hip-hop.</p>
@@ -870,16 +870,16 @@
                     </div>
                     <div class="col-xl-6 col-lg-4 md-mt-25px order-3 order-lg-2 text-center elements-social social-icon-style-04">
                         <ul class="large-icon dark">
-                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
-                            <li><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i><span></span></a></li>
-                            <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
-                            <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li> 
-                            <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li> 
+                            <li><a class="facebook"  target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                            <li><a class="dribbble"  target="_blank"><i class="fa-brands fa-dribbble"></i><span></span></a></li>
+                            <li><a class="twitter"  target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
+                            <li><a class="instagram"  target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li> 
+                            <li><a class="linkedin"  target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li> 
                         </ul>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-sm-6 order-2 order-lg-3 text-center text-sm-end">
                         <span class="fs-19 mb-5px d-block">Get customer care</span>
-                        <h6 class="fw-700 mb-0 ls-minus-1px"><a href="mailto:info@domain.com" class="text-dark-gray">info@domain.com</a></h6>
+                        <h6 class="fw-700 mb-0 ls-minus-1px"><a href="mailto:info@domain.com" class="text-dark-gray">info@proland.com</a></h6>
                     </div>
                 </div>
             </div>
@@ -890,21 +890,21 @@
             <div class="container">
                 <div class="row align-items-center">
                     <!-- start footer column -->
-                    <div class="col-lg-7 md-mb-10px text-center text-lg-start">  
+                    <div class="col-lg-12 md-mb-10px text-center text-lg-center">  
                         <ul class="footer-navbar lh-normal">
-                            <li class="nav-item"><a href="#overview" class="inner-link nav-link">Overview</a></li>
-                            <li class="nav-item"><a href="#features" class="inner-link nav-link">Features</a></li>
-                            <li class="nav-item"><a href="#technology" class="inner-link nav-link">Technology</a></li>
-                            <li class="nav-item"><a href="#design" class="inner-link nav-link">Design</a></li>
-                            <li class="nav-item"><a href="#review" class="inner-link nav-link">Review</a></li> 
-                            <li class="nav-item"><a href="#pricing" class="inner-link nav-link">Pricing</a></li>
+                            <li class="nav-item"><a href="{% url 'home' %}#overview" class="inner-link nav-link">About</a></li>
+                            <li class="nav-item"><a href="{% url 'home' %}#features" class="inner-link nav-link">Features</a></li>
+                            <li class="nav-item"><a href="{% url 'home' %}#technology" class="inner-link nav-link">Genres</a></li>
+                            <li class="nav-item"><a href="{% url 'home' %}#design" class="inner-link nav-link">Artists</a></li>
+                            <li class="nav-item"><a href="{% url 'library' %}#review" class="inner-link nav-link">Library</a></li> 
+                            <!-- <li class="nav-item"><a href="#pricing" class="inner-link nav-link">Pricing</a></li> -->
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
-                    <div class="col-lg-5 last-paragraph-no-margin text-center text-lg-end">
+                    <!-- <div class="col-lg-5 last-paragraph-no-margin text-center text-lg-end">
                         <p>&copy; 2024 Crafto is proudly powered by <a href="https://www.themezaa.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-600">ThemeZaa</a></p>
-                    </div>
+                    </div> -->
                     <!-- end footer column -->
                 </div>
             </div> 
