@@ -13,6 +13,11 @@ from django.contrib.auth import login as login_user
 from django.contrib.auth import logout as logout_user
 from django.contrib.auth.decorators import login_required
 
+""" User profile """
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView, DeleteView
+from django.contrib import messages
+
 @login_required(login_url='login')
 def home(request):
     songs = SpotMusic.objects.all()[:4]
@@ -115,15 +120,23 @@ def library(request):
     return render(request, 'spotify/library.html', {'all':songs})
 
 
-#  for testing purpose
-# def index(request):
-#     songs = SpotMusic.objects.all()
-#     return render(request, 'spotify/index.html', {'all':songs})
+def user_profile(request):
+    user_songs = SpotMusic.objects.filter(user=request.user)
+    return render(request, 'spotify/userProfile.html', {'user_songs': user_songs})
 
+class SongUpdateView(LoginRequiredMixin, UpdateView):
+    model = SpotMusic
+    fields = ['song_author', 'song_title', 'song_image', 'audio']
+    template_name = 'spotify/song_update.html'
+    success_url = reverse_lazy('user_profile')  # Redirect to the user profile after successful update
 
-# def base2(request):
-#     return render(request, 'spotify/base2.html')
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
+    
 
-# def playSong2(request,id):
-#     obj = SpotMusic.objects.get(id=id)
-#     return render(request, 'spotify/playSong2.html',{'song':obj })
+def song_delete(request, pk):
+    song = get_object_or_404(SpotMusic, pk=pk, user=request.user)
+    song.delete()
+    messages.success(request, 'Song deleted successfully.')
+    return redirect('user_profile')

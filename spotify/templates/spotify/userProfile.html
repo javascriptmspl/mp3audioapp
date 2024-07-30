@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>{{ user.username }}'s Profile</h1>
+    <p>Email: {{ user.email }}</p>
+
+    <h2>Your Uploaded Songs</h2>
+    <ul>
+        {% for song in user_songs %}
+            <li>
+                {{ song.song_title }} by {{ song.song_author }}
+                <a href="{% url 'song_update' song.id %}">Update</a>
+                <form action="{% url 'song_delete' song.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+<section id="pricing" class="bg-gradient-very-light-gray">
+    <div class="container">
+        <h1 class="fw-800 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4 text-center">{{ user.username }}'s Profile</h1>
+        <!-- <div class="row justify-content-center mb-4">
+            <div class="col-xl-7 col-lg-9 text-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <h2 class="h1 fw-800 text-dark-gray ls-minus-3px">Play and enjoy the music</h2>
+            </div>
+        </div> -->
+        <div style="row-gap: 50px;" class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 position-relative justify-content-center" data-anime='{ "el": "childs", "rotateZ": [5, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
+            <!-- start images box -->
+            <!-- end images box -->
+            <!-- start images box -->
+            {% for song in user_songs %}
+            <div class="col text-center md-mb-50px shadow"> 
+                    <img style="width: 200px; height:150px;" src="{{ song.song_image.url }}" alt="" />
+                <div class="mt-30px">
+                    <h6 class="fw-700 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4">Title: {{ song.song_title }}</h6>
+                            <h6 class="fw-600 ls-minus-3px text-dark-gray mb-30px fancy-text-style-4">Artist: {{ song.song_author }}</h6>
+                            <span><a href="{% url 'song_delete' song.id %}" class="btn btn-lg btn-dark-gray btn-hover-animation-switch btn-box-shadow btn-round-edge section-link mb-2">Delete</a></span>
+                            <a href="{% url 'song_update' song.id %}" class="btn btn-lg btn-dark-gray btn-hover-animation-switch btn-box-shadow btn-round-edge section-link mb-2">Update</a>
+                    <!-- <span class="fs-18 fw-700 text-dark-gray mt-10px d-block">Grey</span> -->
+                </div>
+            </div>
+            {% endfor %}
+            <!-- end images box -->
+            
+            
+        </div>
+    
+    </div>
+</section> 
+{% endblock %}

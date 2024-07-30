@@ -17,14 +17,12 @@ urlpatterns = [
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='registration/password_reset_form.html'), name='password_reset'),
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
-    
+    path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),  
     path('library/', views.library, name="library"),
     
-    # for test
-    # path('index/', views.index, name='index'),
-    # path('base2/', views.base2, name='base2'),
-    # path('play2/<int:id>',views.playSong2, name="play2")
+    path('user/profile/', views.user_profile, name='user_profile'),
+    path('song/<int:pk>/update/', views.SongUpdateView.as_view(), name='song_update'),
+    path('song/<int:pk>/delete/', views.song_delete, name='song_delete'),
 ]
 
 

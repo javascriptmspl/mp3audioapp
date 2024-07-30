@@ -36,7 +36,7 @@
             <nav class="navbar navbar-expand-lg header-light bg-transparent header-reverse glass-effect" data-header-hover="light">
                 <div class="container-fluid">
                     <div class="col-auto col-lg-2 me-lg-0 me-auto">
-                        <a class="navbar-brand section-link" href="#home">
+                        <a class="navbar-brand section-link" href="{% url 'home' %}">
                             <img src="{% static 'old/images/logonav.webp' %}" data-at2x="{% static 'old/images/logonav.webp' %}" alt="" class="default-logo">
                             <img src="{% static 'old/images/logonav.webp' %}" data-at2x="{% static 'old/images/logonav.webp' %}" alt="" class="alt-logo">
                             <img src="{% static 'old/images/logonav.webp' %}" data-at2x="{% static 'old/images/logonav.webp' %}" alt="" class="mobile-logo"> 
@@ -59,7 +59,7 @@
                                 <li class="nav-item"><a href="#features" class="inner-link nav-link">Features</a></li>
                                 <!-- <li class="nav-item"><a href="#technology" class="inner-link nav-link">Category</a></li> -->
                                 <li class="nav-item"><a href="#design" class="inner-link nav-link">Genres</a></li>
-                                <li class="nav-item"><a href="#review" class="inner-link nav-link">Artists</a></li>
+                                <li class="nav-item"><a href="{% url 'user_profile' %}" class="inner-link nav-link">Profile</a></li>
                                 <li class="nav-item"><a href="{% url 'library' %}" class="inner-link nav-link">Library</a></li>
                                 {% if user.is_authenticated %}
                                 <li class="nav-item"><a href="{% url 'logout' %}" class="inner-link nav-link">Logout</a></li>

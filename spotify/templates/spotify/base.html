@@ -53,7 +53,7 @@
                             <li class="nav-item"><a href="{% url 'home' %}#features" class="inner-link nav-link">Features</a></li>
                             <!-- <li class="nav-item"><a href="#technology" class="inner-link nav-link">Category</a></li> -->
                             <li class="nav-item"><a href="{% url 'home' %}#design" class="inner-link nav-link">Genres</a></li>
-                            <li class="nav-item"><a href="{% url 'home' %}#review" class="inner-link nav-link">Artists</a></li>
+                            <li class="nav-item"><a href="{% url 'user_profile' %}" class="inner-link nav-link">Profile</a></li>
                             <li class="nav-item"><a href="{% url 'library' %}" class="inner-link nav-link">Library</a></li>
                             {% if user.is_authenticated %}
                                 <li class="nav-item"><a href="{% url 'logout' %}" class="inner-link nav-link">Logout</a></li>

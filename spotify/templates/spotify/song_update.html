@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="pricing" class="bg-gradient-very-light-gray" style="font-weight: 800; color: #333; margin-bottom: 30px;">
+    <h1>Update song</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-lg btn-dark-gray btn-hover-animation-switch btn-box-shadow btn-round-edge section-link">Update</button>
+    </form> 
+<div class="container login_page_parent_wrap">          
+</div>
+</section> 
+
+{% endblock %}
